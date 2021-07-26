@@ -4,6 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Crypt;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Contracts\Encryption\DecryptException;
 
 class ApiAuthenticator
 {
@@ -16,7 +19,7 @@ class ApiAuthenticator
      */
 
 
-    public function handle(Request $request, Closure $next)
+    public function handle($request, Closure $next)
     {
         if($request->hasCookie('Authentication')) {
             try{

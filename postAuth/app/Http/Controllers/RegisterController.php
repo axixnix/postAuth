@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 //use App\Utils\RandomFunctions; // was needed in order to use RandomFunctions::generateRandomString(15);
 use Illuminate\Support\Facades\Hash;

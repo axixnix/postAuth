@@ -61,7 +61,7 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'apiAuthenticator'=> App\Http\Middleware\ApiAuthenticator::class//this is where I added my own authenticator
+        'apiAuthenticator'=> \App\Http\Middleware\ApiAuthenticator::class//this is where I added my own authenticator
     ];
 
     /**
